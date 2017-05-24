@@ -52,100 +52,100 @@ function consilium_node_preview($variables) {
 function consilium_process_html(&$variables) {
   $variables['styles'] = preg_replace('/\.css\?.*"/','.css"', $variables['styles']);
 }
-/*
-function consilium_menu_local_task($variables) {
-    $link = $variables['element']['#link'];
-    $link_text = $link['title'];
 
-    $view = views_get_view('all_jobs');
-    $view->set_display('page_featured');
-    $view->preview('page_featured');
-    $featured = count($view->result);
-
-    $view = views_get_view('all_jobs');
-    $view->set_display('page_jobs');
-    $view->preview('page_jobs');
-    $alljobs = count($view->result);
-
-    $view = views_get_view('all_jobs');
-    $view->set_display('page_publicads');
-    $view->preview('page_publicads');
-    $publics = count($view->result);
-
-    $view = views_get_view('all_jobs');
-    $view->set_display('page_tenders');
-    $view->preview('page_tenders');
-    $tenders = count($view->result);
-
-    $view = views_get_view('all_jobs');
-    $view->set_display('page_internships');
-    $view->preview('page_internships');
-    $intern = count($view->result);
-
-    $view = views_get_view('all_jobs');
-    $view->set_display('page_others');
-    $view->preview('page_others');
-    $others = count($view->result);
-
-    $counter_badge = '';
-
-    if ($variables['element']['#link']['path'] == 'jobs/featured' ){
-        $counter_badge = '<span class="badge">' . $featured . '</span>';
-    }else if ($variables['element']['#link']['path'] == 'jobs/all' ){
-        $counter_badge = '<span class="badge">' . $alljobs . '</span>';
-    }else if ($variables['element']['#link']['path'] == 'jobs/tender' ){
-        $counter_badge = '<span class="badge">' . $tenders . '</span>';
-    }else if ($variables['element']['#link']['path'] == 'jobs/internships' ){
-        $counter_badge = '<span class="badge">' . $intern . '</span>';
-    }else if ($variables['element']['#link']['path'] == 'jobs/others' ){
-        $counter_badge = '<span class="badge">' . $others . '</span>';
-    }else if ($variables['element']['#link']['path'] == 'jobs/public-adverts' ){
-        $counter_badge = '<span class="badge">' . $publics . '</span>';
-    }
-//    else if ($variables['element']['#link']['path'] == 'jobs/search-result' ){
+//function consilium_menu_local_task($variables) {
+//    $link = $variables['element']['#link'];
+//    $link_text = $link['title'];
+//
+//    $view = views_get_view('all_jobs');
+//    $view->set_display('page_featured');
+//    $view->preview('page_featured');
+//    $featured = count($view->result);
+//
+//    $view = views_get_view('all_jobs');
+//    $view->set_display('page_jobs');
+//    $view->preview('page_jobs');
+//    $alljobs = count($view->result);
+//
+//    $view = views_get_view('all_jobs');
+//    $view->set_display('page_publicads');
+//    $view->preview('page_publicads');
+//    $publics = count($view->result);
+//
+//    $view = views_get_view('all_jobs');
+//    $view->set_display('page_tenders');
+//    $view->preview('page_tenders');
+//    $tenders = count($view->result);
+//
+//    $view = views_get_view('all_jobs');
+//    $view->set_display('page_internships');
+//    $view->preview('page_internships');
+//    $intern = count($view->result);
+//
+//    $view = views_get_view('all_jobs');
+//    $view->set_display('page_others');
+//    $view->preview('page_others');
+//    $others = count($view->result);
+//
+//    $counter_badge = '';
+//
+//    if ($variables['element']['#link']['path'] == 'jobs/featured' ){
 //        $counter_badge = '<span class="badge">' . $featured . '</span>';
+//    }else if ($variables['element']['#link']['path'] == 'jobs/all' ){
+//        $counter_badge = '<span class="badge">' . $alljobs . '</span>';
+//    }else if ($variables['element']['#link']['path'] == 'jobs/tender' ){
+//        $counter_badge = '<span class="badge">' . $tenders . '</span>';
+//    }else if ($variables['element']['#link']['path'] == 'jobs/internships' ){
+//        $counter_badge = '<span class="badge">' . $intern . '</span>';
+//    }else if ($variables['element']['#link']['path'] == 'jobs/others' ){
+//        $counter_badge = '<span class="badge">' . $others . '</span>';
+//    }else if ($variables['element']['#link']['path'] == 'jobs/public-adverts' ){
+//        $counter_badge = '<span class="badge">' . $publics . '</span>';
 //    }
-    $link_text = t('!local-task-title!counter', array('!local-task-title' => $link['title'], '!counter' => $counter_badge));
+////    else if ($variables['element']['#link']['path'] == 'jobs/search-result' ){
+////        $counter_badge = '<span class="badge">' . $featured . '</span>';
+////    }
+//    $link_text = t('!local-task-title!counter', array('!local-task-title' => $link['title'], '!counter' => $counter_badge));
+//
+//    if (!empty($variables['element']['#active'])) {
+//        // Add text to indicate active tab for non-visual users.
+//        $active = '<span class="element-invisible">' . t('(active tab)') . '</span>';
+//
+//        // If the link does not contain HTML already, check_plain() it now.
+//        // After we set 'html'=TRUE the link will not be sanitized by l().
+//        if (empty($link['localized_options']['html'])) {
+//            $link['title'] = check_plain($link['title']);
+//        }
+//        $link['localized_options']['html'] = TRUE;
+//        $link_text = t('!local-task-title!active', array('!local-task-title' => $link['title'], '!active' => $active, '!counter' => $counter_badge));
+//    }
+//
+//    if (empty($link['localized_options']['html'])) {
+//        $link['title'] = check_plain($link['title']);
+//    }
+//    return '<li' . (!empty($variables['element']['#active']) ? ' class="active"' : '') . '>' . l($link_text, $link['href'], $link['localized_options']) . '</li>';
+//}
 
-    if (!empty($variables['element']['#active'])) {
-        // Add text to indicate active tab for non-visual users.
-        $active = '<span class="element-invisible">' . t('(active tab)') . '</span>';
 
-        // If the link does not contain HTML already, check_plain() it now.
-        // After we set 'html'=TRUE the link will not be sanitized by l().
-        if (empty($link['localized_options']['html'])) {
-            $link['title'] = check_plain($link['title']);
-        }
-        $link['localized_options']['html'] = TRUE;
-        $link_text = t('!local-task-title!active', array('!local-task-title' => $link['title'], '!active' => $active, '!counter' => $counter_badge));
-    }
 
-    if (empty($link['localized_options']['html'])) {
-        $link['title'] = check_plain($link['title']);
-    }
-    return '<li' . (!empty($variables['element']['#active']) ? ' class="active"' : '') . '>' . l($link_text, $link['href'], $link['localized_options']) . '</li>';
-}
-
-*/
-
-function consilium_menu_local_tasks(&$variables){
-//    dpm($variables['primary']);
-    foreach ($variables['primary'] as $menu_item){
-        $path = $menu_item['#link']['path'];
-        if ($path == 'jobs/featured'){
-//            dpm($variables['primary']);
-        } elseif ($path == 'jobs/all'){
-
-        }elseif ($path == 'jobs/tender'){
-
-        }elseif ($path == 'jobs/internships'){
-
-        }elseif ($path == 'jobs/others'){
-
-        }elseif ($path == 'jobs/public-adverts'){
-
-        }
-    }
+//function consilium_menu_local_tasks(&$variables){
+////    dpm($variables['primary']);
+//    foreach ($variables['primary'] as $menu_item){
+//        $path = $menu_item['#link']['path'];
+//        if ($path == 'jobs/featured'){
+////            dpm($variables['primary']);
+//        } elseif ($path == 'jobs/all'){
+//
+//        }elseif ($path == 'jobs/tender'){
+//
+//        }elseif ($path == 'jobs/internships'){
+//
+//        }elseif ($path == 'jobs/others'){
+//
+//        }elseif ($path == 'jobs/public-adverts'){
+//
+//        }
+//    }
 
 //    if ($variables['primary']['#link']['path'] == 'jobs/featured' ){
 //        $counter_badge = '<span class="badge">' . $featured . '</span>';
@@ -160,4 +160,24 @@ function consilium_menu_local_tasks(&$variables){
 //    }else if ($variables['element']['#link']['path'] == 'jobs/public-adverts' ){
 //        $counter_badge = '<span class="badge">' . $publics . '</span>';
 //    }
+//}
+
+function theme_menu_local_action($variables) {
+    dpm($variables);
+
+    $link = $variables['element']['#link'];
+
+    $output = '<li>';
+    if (isset($link['href'])) {
+        $output .= l($link['title'], $link['href'], isset($link['localized_options']) ? $link['localized_options'] : array());
+    }
+    elseif (!empty($link['localized_options']['html'])) {
+        $output .= $link['title'];
+    }
+    else {
+        $output .= check_plain($link['title']);
+    }
+    $output .= "</li>\n";
+
+    return $output;
 }
