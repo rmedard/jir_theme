@@ -131,18 +131,18 @@ function consilium_menu_local_task($variables) {
 function consilium_menu_local_tasks(&$variables){
 //    dpm($variables['primary']);
     foreach ($variables['primary'] as $menu_item){
-        dpm($menu_item['#link']['path']);
-        if ($menu_item['#link'] == 'jobs/featured'){
+        $path = $menu_item['#link']['path'];
+        if ($path == 'jobs/featured'){
+            dpm($variables['primary']);
+        } elseif ($path == 'jobs/all'){
 
-        } elseif ($menu_item['#link'] == 'jobs/all'){
+        }elseif ($path == 'jobs/tender'){
 
-        }elseif ($menu_item['#link'] == 'jobs/tender'){
+        }elseif ($path == 'jobs/internships'){
 
-        }elseif ($menu_item['#link'] == 'jobs/internships'){
+        }elseif ($path == 'jobs/others'){
 
-        }elseif ($menu_item['#link'] == 'jobs/others'){
-
-        }elseif ($menu_item['#link'] == 'jobs/public-adverts'){
+        }elseif ($path == 'jobs/public-adverts'){
 
         }
     }
