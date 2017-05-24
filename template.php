@@ -131,7 +131,7 @@ function consilium_menu_local_task($variables) {
 function consilium_menu_local_tasks(&$variables){
 //    dpm($variables['primary']);
     foreach ($variables['primary'] as $menu_item){
-        dpm($menu_item['#link']);
+        dpm($menu_item['#link']['path']);
         if ($menu_item['#link'] == 'jobs/featured'){
 
         } elseif ($menu_item['#link'] == 'jobs/all'){
