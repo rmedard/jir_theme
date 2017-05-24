@@ -105,7 +105,7 @@ function consilium_menu_local_task($variables) {
 //    else if ($variables['element']['#link']['path'] == 'jobs/search-result' ){
 //        $counter_badge = '<span class="badge">' . $featured . '</span>';
 //    }
-    $link_text = t('!local-task-title!jobs-counter', array('!local-task-title' => $link['title'], '!jobs-counter' => $counter_badge));
+    $link_text = t('!local-task-title!active!jobs-counter', array('!local-task-title' => $link['title'], '!jobs-counter' => $counter_badge));
 
     if (!empty($variables['element']['#active'])) {
         // Add text to indicate active tab for non-visual users.
