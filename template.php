@@ -55,7 +55,7 @@ function consilium_process_html(&$variables) {
 
 function consilium_menu_local_task($variables) {
     $link = $variables['element']['#link'];
-//    $link_text = $link['title'];
+    $link_text = $link['title'];
 
     $view = views_get_view('all_jobs');
     $view->set_display('page_featured');
