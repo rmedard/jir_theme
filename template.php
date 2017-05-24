@@ -128,24 +128,24 @@ function consilium_process_html(&$variables) {
 
 
 
-//function consilium_menu_local_tasks(&$variables){
-////    dpm($variables['primary']);
-//    foreach ($variables['primary'] as $menu_item){
-//        $path = $menu_item['#link']['path'];
-//        if ($path == 'jobs/featured'){
-////            dpm($variables['primary']);
-//        } elseif ($path == 'jobs/all'){
-//
-//        }elseif ($path == 'jobs/tender'){
-//
-//        }elseif ($path == 'jobs/internships'){
-//
-//        }elseif ($path == 'jobs/others'){
-//
-//        }elseif ($path == 'jobs/public-adverts'){
-//
-//        }
-//    }
+function consilium_menu_local_tasks(&$variables){
+    dpm($variables['primary']);
+    foreach ($variables['primary'] as $menu_item){
+        $path = $menu_item['#link']['path'];
+        if ($path == 'jobs/featured'){
+//            dpm($variables['primary']);
+        } elseif ($path == 'jobs/all'){
+
+        }elseif ($path == 'jobs/tender'){
+
+        }elseif ($path == 'jobs/internships'){
+
+        }elseif ($path == 'jobs/others'){
+
+        }elseif ($path == 'jobs/public-adverts'){
+
+        }
+    }
 
 //    if ($variables['primary']['#link']['path'] == 'jobs/featured' ){
 //        $counter_badge = '<span class="badge">' . $featured . '</span>';
@@ -160,24 +160,24 @@ function consilium_process_html(&$variables) {
 //    }else if ($variables['element']['#link']['path'] == 'jobs/public-adverts' ){
 //        $counter_badge = '<span class="badge">' . $publics . '</span>';
 //    }
-//}
-
-function consilium_menu_local_action($variables) {
-    dpm($variables);
-
-    $link = $variables['element']['#link'];
-
-    $output = '<li>';
-    if (isset($link['href'])) {
-        $output .= l($link['title'], $link['href'], isset($link['localized_options']) ? $link['localized_options'] : array());
-    }
-    elseif (!empty($link['localized_options']['html'])) {
-        $output .= $link['title'];
-    }
-    else {
-        $output .= check_plain($link['title']);
-    }
-    $output .= "</li>\n";
-
-    return $output;
 }
+
+//function consilium_menu_local_action($variables) {
+//    dpm($variables);
+//
+//    $link = $variables['element']['#link'];
+//
+//    $output = '<li>';
+//    if (isset($link['href'])) {
+//        $output .= l($link['title'], $link['href'], isset($link['localized_options']) ? $link['localized_options'] : array());
+//    }
+//    elseif (!empty($link['localized_options']['html'])) {
+//        $output .= $link['title'];
+//    }
+//    else {
+//        $output .= check_plain($link['title']);
+//    }
+//    $output .= "</li>\n";
+//
+//    return $output;
+//}
