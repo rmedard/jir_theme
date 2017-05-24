@@ -129,5 +129,35 @@ function consilium_menu_local_task($variables) {
 */
 
 function consilium_menu_local_tasks(&$variables){
-    dpm($variables);
+
+    foreach ($variables['primary'] as $menu_item){
+        dpm($menu_item);
+        if ($menu_item['#link'] == 'jobs/featured'){
+
+        } elseif ($menu_item['#link'] == 'jobs/all'){
+
+        }elseif ($menu_item['#link'] == 'jobs/tender'){
+
+        }elseif ($menu_item['#link'] == 'jobs/internships'){
+
+        }elseif ($menu_item['#link'] == 'jobs/others'){
+
+        }elseif ($menu_item['#link'] == 'jobs/public-adverts'){
+
+        }
+    }
+
+//    if ($variables['primary']['#link']['path'] == 'jobs/featured' ){
+//        $counter_badge = '<span class="badge">' . $featured . '</span>';
+//    }else if ($variables['element']['#link']['path'] == 'jobs/all' ){
+//        $counter_badge = '<span class="badge">' . $alljobs . '</span>';
+//    }else if ($variables['element']['#link']['path'] == 'jobs/tender' ){
+//        $counter_badge = '<span class="badge">' . $tenders . '</span>';
+//    }else if ($variables['element']['#link']['path'] == 'jobs/internships' ){
+//        $counter_badge = '<span class="badge">' . $intern . '</span>';
+//    }else if ($variables['element']['#link']['path'] == 'jobs/others' ){
+//        $counter_badge = '<span class="badge">' . $others . '</span>';
+//    }else if ($variables['element']['#link']['path'] == 'jobs/public-adverts' ){
+//        $counter_badge = '<span class="badge">' . $publics . '</span>';
+//    }
 }
