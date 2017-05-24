@@ -89,5 +89,5 @@ function consilium_menu_local_task($variables) {
     }else if ($variables['element']['#link']['path'] == 'jobs/search-result' ){
 
     }
-    return '<li' . (!empty($variables['element']['#active']) ? ' class="active"' : '') . '>' . l($link_text, $link['href'], $link['localized_options']) . '</li>\n';
+    return '<li' . (!empty($variables['element']['#active']) ? ' class="active"' : '') . '>' . l($link_text, $link['href'], $link['localized_options']) . '</li>';
 }
