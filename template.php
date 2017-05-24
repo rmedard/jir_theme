@@ -54,7 +54,5 @@ function consilium_process_html(&$variables) {
 }
 
 function consilium_menu_local_task($variables) {
-    //$variables['#tree'] = $variables['tree'];
-    //$variables['tree'] = $variables['tree']['#children'];
-    dpm($variables);
+    dpm($variables['element']['#link']['path']);
 }
