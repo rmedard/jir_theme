@@ -52,7 +52,7 @@ function consilium_node_preview($variables) {
 function consilium_process_html(&$variables) {
   $variables['styles'] = preg_replace('/\.css\?.*"/','.css"', $variables['styles']);
 }
-
+/*
 function consilium_menu_local_task($variables) {
     $link = $variables['element']['#link'];
     $link_text = $link['title'];
@@ -87,28 +87,20 @@ function consilium_menu_local_task($variables) {
     $view->preview('page_others');
     $others = count($view->result);
 
-//    $link_part_one = '!local-task-title!counter';
-//    $link_part_two = array('!local-task-title' => $link['title']);
     $counter_badge = '';
 
     if ($variables['element']['#link']['path'] == 'jobs/featured' ){
         $counter_badge = '<span class="badge">' . $featured . '</span>';
-        //$link_text = t($link_part_one, array('!local-task-title' => $link['title'], '!counter' => $counter_badge));
     }else if ($variables['element']['#link']['path'] == 'jobs/all' ){
         $counter_badge = '<span class="badge">' . $alljobs . '</span>';
-        //$link_text = t($link_part_one, array('!local-task-title' => $link['title'], '!counter' => $counter_badge));
     }else if ($variables['element']['#link']['path'] == 'jobs/tender' ){
         $counter_badge = '<span class="badge">' . $tenders . '</span>';
-//        $link_text = t($link_part_one, array('!local-task-title' => $link['title'], '!counter' => $counter_badge));
     }else if ($variables['element']['#link']['path'] == 'jobs/internships' ){
         $counter_badge = '<span class="badge">' . $intern . '</span>';
-//        $link_text = t($link_part_one, array('!local-task-title' => $link['title'], '!counter' => $counter_badge));
     }else if ($variables['element']['#link']['path'] == 'jobs/others' ){
         $counter_badge = '<span class="badge">' . $others . '</span>';
-//        $link_text = t($link_part_one, array('!local-task-title' => $link['title'], '!counter' => $counter_badge));
     }else if ($variables['element']['#link']['path'] == 'jobs/public-adverts' ){
         $counter_badge = '<span class="badge">' . $publics . '</span>';
-//        $link_text = t($link_part_one, array('!local-task-title' => $link['title'], '!counter' => $counter_badge));
     }
 //    else if ($variables['element']['#link']['path'] == 'jobs/search-result' ){
 //        $counter_badge = '<span class="badge">' . $featured . '</span>';
@@ -132,4 +124,10 @@ function consilium_menu_local_task($variables) {
         $link['title'] = check_plain($link['title']);
     }
     return '<li' . (!empty($variables['element']['#active']) ? ' class="active"' : '') . '>' . l($link_text, $link['href'], $link['localized_options']) . '</li>';
+}
+
+*/
+
+function consilium_menu_local_tasks(&$variables){
+    dpm($variables);
 }
