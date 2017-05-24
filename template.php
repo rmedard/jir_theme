@@ -53,7 +53,7 @@ function consilium_process_html(&$variables) {
   $variables['styles'] = preg_replace('/\.css\?.*"/','.css"', $variables['styles']);
 }
 
-function consilium_preprocess_menu_tree(&$variables) {
+function consilium_preprocess_menu_link(&$variables) {
     //$variables['#tree'] = $variables['tree'];
     //$variables['tree'] = $variables['tree']['#children'];
     dpm($variables);
