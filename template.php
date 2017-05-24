@@ -165,19 +165,19 @@ function consilium_process_html(&$variables) {
 function theme_menu_local_action($variables) {
     dpm($variables);
 
-    $link = $variables['element']['#link'];
-
-    $output = '<li>';
-    if (isset($link['href'])) {
-        $output .= l($link['title'], $link['href'], isset($link['localized_options']) ? $link['localized_options'] : array());
-    }
-    elseif (!empty($link['localized_options']['html'])) {
-        $output .= $link['title'];
-    }
-    else {
-        $output .= check_plain($link['title']);
-    }
-    $output .= "</li>\n";
-
-    return $output;
+//    $link = $variables['element']['#link'];
+//
+//    $output = '<li>';
+//    if (isset($link['href'])) {
+//        $output .= l($link['title'], $link['href'], isset($link['localized_options']) ? $link['localized_options'] : array());
+//    }
+//    elseif (!empty($link['localized_options']['html'])) {
+//        $output .= $link['title'];
+//    }
+//    else {
+//        $output .= check_plain($link['title']);
+//    }
+//    $output .= "</li>\n";
+//
+//    return $output;
 }
