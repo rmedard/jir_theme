@@ -87,6 +87,7 @@ sections[callus] = Call Us
 ; Stylesheets
 stylesheets[all][] = css/style.css
 stylesheets[all][] = css/social-sharing.css
+stylesheets[all][] = css/custom.css
 
 ; SCSS Files
 scss[] = variables.scss
@@ -101,6 +102,7 @@ scss[] = style_rtl.scss
 scss[] = responsive.scss
 scss[] = portfolio.scss
 scss[] = bonus.scss
+scss[] = custom.scss
 
 ; Scripts
 scripts[] = js/modernizr.min.js
