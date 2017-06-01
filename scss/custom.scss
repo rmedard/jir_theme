@@ -1,2 +1,6 @@
 div.jobs-tabs > div.tabs > ul.nav-tabs > li {
-  padding: 0 15px; }
+  padding: 0 12px;
+  :first-child{
+    padding-left: 0px;
+  }
+}
