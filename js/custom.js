@@ -50,8 +50,8 @@ $(document).ready(function(){
 	$(".jobs-tabs > div.tabs > ul.nav-tabs > li:nth-child(2) > a").append(alljobs);
 	$(".jobs-tabs > div.tabs > ul.nav-tabs > li:nth-child(3) > a").append(tenders);
 	$(".jobs-tabs > div.tabs > ul.nav-tabs > li:nth-child(4) > a").append(interns);
-	$(".jobs-tabs > div.tabs > ul.nav-tabs > li:nth-child(5) > a").append(others);
-	$(".jobs-tabs > div.tabs > ul.nav-tabs > li:nth-child(6) > a").append(publics);
+	$(".jobs-tabs > div.tabs > ul.nav-tabs > li:nth-child(5) > a").append(publics);
+	$(".jobs-tabs > div.tabs > ul.nav-tabs > li:nth-child(6) > a").append(others);
 	
 	if($("#featuredid").text() == "0"){
 		$(".jobs-tabs > div.tabs > ul.nav-tabs > li:nth-child(1)").css('display', 'none');
@@ -65,10 +65,10 @@ $(document).ready(function(){
 	if($("#internid").text() == "0"){
 		$(".jobs-tabs > div.tabs > ul.nav-tabs > li:nth-child(4)").css('display', 'none');
 	}
-	if($("#othersid").text() == "0"){
+	if($("#publicid").text() == "0"){
 		$(".jobs-tabs > div.tabs > ul.nav-tabs > li:nth-child(5)").css('display', 'none');
 	}
-	if($("#publicid").text() == "0"){
+	if($("#othersid").text() == "0"){
 		$(".jobs-tabs > div.tabs > ul.nav-tabs > li:nth-child(6)").css('display', 'none');
 	}
 	//End
