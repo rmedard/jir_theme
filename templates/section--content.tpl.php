@@ -2,7 +2,7 @@
     <?php $containerClass = $full_width?"sh-container":"container";?>
     <div class="<?php print $containerClass;?>">
         <div class="row">
-            <?php print $content; ?>
+            <?php var_dump($content); ?>
         </div>
     </div>
 </section>
