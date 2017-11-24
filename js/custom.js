@@ -99,7 +99,7 @@ $(document).ready(function(){
 	$(".simplenews-unsubscribe > div > .btn.form-submit, .simplenews-subscribe > div > .btn.form-submit").addClass('btn-default btn-block');	
 // 	$("button[value='Upload']").parent('.form-managed-file').css('display', 'inline-flex');
 //     $("button[value='Upload']").text('Attach this file');
-   $("button[id*='edit-field-attachment-und-']").text('Attach this file');
+//    $("button[id*='edit-field-attachment-und-']").text('Attach this file');
 	$(".term-level-element-table > thead > tr > th:nth-child(2)").text("None");
 	$(".term-level-element-table > tbody > tr.term-level-element-table-row > td:nth-child(1)").css('width', '25%');
 	$(".term-level-element-table > tbody > tr.term-level-element-table-row > td:nth-child(2)").css('width', '15%');
