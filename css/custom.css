@@ -3,6 +3,8 @@ div.jobs-tabs > div.tabs > ul.nav-tabs > li {
 
 div.region-user-first {
   float: right; }
-input[id*="edit-field-attachment-und-0-upload"] {
+
+input[id*="edit-field-attachment-und-"] {
   display: inline-block; }
+
 /*# sourceMappingURL=custom.css.map */
