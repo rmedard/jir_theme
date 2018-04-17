@@ -324,7 +324,7 @@ div.view-id-testimonials > div.view-header{
 .field-name-field-employer-logo > div.field-items >div.field-item{
 	line-height: 90px;
 }
-div#views-bootstrap-media-1 > ul > li > div.pull-left, div#views-bootstrap-media-2 > ul > li > div.pull-left{
+div#views-bootstrap-media-1 > ul > li > div.media-left, div#views-bootstrap-media-2 > ul > li > div.media-left{
 	height: 90px;
     line-height: 90px;
     width: 90px;
