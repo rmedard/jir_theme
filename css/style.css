@@ -325,9 +325,8 @@ div.view-id-testimonials > div.view-header{
 	line-height: 90px;
 }
 div#views-bootstrap-media-1 > ul > li > div.media-left, div#views-bootstrap-media-2 > ul > li > div.media-left{
-	height: 90px;
-    line-height: 90px;
-    width: 90px;
+	  line-height: 90px;
+    width: 14%;
 }
 div.region-pagetitle > div.main-menu{
 	float: left;
