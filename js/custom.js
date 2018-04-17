@@ -43,15 +43,17 @@ $(document).ready(function(){
 	var alljobs = '<span class="badge">' + $("#alljobsid").text() + '</span>';
 	var publics = '<span class="badge">' + $("#publicid").text() + '</span>';
 	var tenders = '<span class="badge">' + $("#tendersid").text() + '</span>';
+	var consultancy = '<span class="badge">' + $("#consultancyid").text() + '</span>';
 	var interns = '<span class="badge">' + $("#internid").text() + '</span>';
 	var others = '<span class="badge">' + $("#othersid").text() + '</span>';
 	
 	$(".jobs-tabs > div.tabs > ul.nav-tabs > li:nth-child(1) > a").append(featured);
 	$(".jobs-tabs > div.tabs > ul.nav-tabs > li:nth-child(2) > a").append(alljobs);
 	$(".jobs-tabs > div.tabs > ul.nav-tabs > li:nth-child(3) > a").append(tenders);
-	$(".jobs-tabs > div.tabs > ul.nav-tabs > li:nth-child(4) > a").append(interns);
-	$(".jobs-tabs > div.tabs > ul.nav-tabs > li:nth-child(5) > a").append(publics);
-	$(".jobs-tabs > div.tabs > ul.nav-tabs > li:nth-child(6) > a").append(others);
+	$(".jobs-tabs > div.tabs > ul.nav-tabs > li:nth-child(4) > a").append(consultancy);
+	$(".jobs-tabs > div.tabs > ul.nav-tabs > li:nth-child(5) > a").append(interns);
+	$(".jobs-tabs > div.tabs > ul.nav-tabs > li:nth-child(6) > a").append(publics);
+	$(".jobs-tabs > div.tabs > ul.nav-tabs > li:nth-child(7) > a").append(others);
 	
 	if($("#featuredid").text() == "0"){
 		$(".jobs-tabs > div.tabs > ul.nav-tabs > li:nth-child(1)").css('display', 'none');
