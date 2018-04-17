@@ -64,14 +64,17 @@ $(document).ready(function(){
 	if($("#tendersid").text() == "0"){
 		$(".jobs-tabs > div.tabs > ul.nav-tabs > li:nth-child(3)").css('display', 'none');
 	}
+    if($("#consultancyid").text() == "0"){
+        $(".jobs-tabs > div.tabs > ul.nav-tabs > li:nth-child(4)").css('display', 'none');
+    }
 	if($("#internid").text() == "0"){
-		$(".jobs-tabs > div.tabs > ul.nav-tabs > li:nth-child(4)").css('display', 'none');
-	}
-	if($("#publicid").text() == "0"){
 		$(".jobs-tabs > div.tabs > ul.nav-tabs > li:nth-child(5)").css('display', 'none');
 	}
-	if($("#othersid").text() == "0"){
+	if($("#publicid").text() == "0"){
 		$(".jobs-tabs > div.tabs > ul.nav-tabs > li:nth-child(6)").css('display', 'none');
+	}
+	if($("#othersid").text() == "0"){
+		$(".jobs-tabs > div.tabs > ul.nav-tabs > li:nth-child(7)").css('display', 'none');
 	}
 	//End
 	$(".simplenews-subscribe > div > div.form-type-textfield > label").css('display', 'none');
